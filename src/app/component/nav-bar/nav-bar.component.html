@@ -9,11 +9,12 @@
         <li>
           <a md-button routerLink="/bookList">Book</a>
         </li>
-        <form (ngSubmit)="onSearchByTitle()" class="navbar-form"></form>
+        <form (ngSubmit)="onSearchByTitle()" class="navbar-form">
         <div class="form-group">
           <input type="text" name="searchByTitle" [(ngModel)]="keyboard" class="form-control" placeholder="Book Title" />
         </div>
         <button type="submit" class="btn btn-default">Search</button>
+      </form>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li *ngIf="!loggedIn">

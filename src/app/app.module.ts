@@ -7,12 +7,16 @@ import { HomeComponent } from './component/home/home.component';
 import { routing } from './app.routing';
 import { FormsModule} from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { MyAccountComponent } from './component/my-account/my-account.component';
+import { LoginService } from './services/login.service';
+import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    HomeComponent
+    HomeComponent,
+    MyAccountComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +24,10 @@ import { HttpModule } from '@angular/http';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    LoginService,
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
